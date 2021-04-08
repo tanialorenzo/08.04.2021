@@ -1,0 +1,113 @@
+/* *{
+    margin: 0px;
+    padding: 0px;
+} */
+
+.caja{
+    height: 150px;
+    width: 150px;
+    border-radius: 1em;
+    background-color: orange;
+    animation-name: ejemplo1;
+    animation-duration: 2s;
+}
+.caja2{
+    height: 150px;
+    width: 150px;
+    border-radius: 1em;
+    background-color: orange;
+    animation-name: ejemplo2;
+    animation-duration: 0s;
+    /* animation-iteration-count: infinite; */
+}
+@keyframes ejemplo1{
+    from {
+
+    }
+    to {
+        transform: rotate(20deg);
+        background-color: blue;
+    }
+}
+
+@keyframes ejemplo2{
+    0% {
+        transform: rotate(100px);
+    }
+    25% {
+        background-color: blue;
+        transform: translateY(100px);
+    }
+    50% {
+        transform: translateX(-60px);
+    }
+    75% {
+        transform: translateY(-80px);
+        background-color: aquamarine;
+    }
+    100% {
+        transform:translateY(-20px);
+        transform: translateX(-20px);
+    }
+}
+
+.banner{
+    position: relative;
+    background: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)) ,url(../img/cropped-AdobeStock_324470039-scaled-1.jpeg);
+    background-size: cover;
+    height: 100px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}   
+.banner button{
+    position: absolute;
+    bottom: 10px;
+    animation-name: pescado2;
+    animation-duration: 4s;
+    /* animation-iteration-count: infinite; */
+}
+.banner p{
+    font-weight: bold;
+    animation-name: pescado;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes pescado{
+   
+    50%{
+        transform: scale(1.2);
+    }
+
+}
+
+@keyframes pescado2{
+    0%{
+        bottom: -30px;
+    }
+   
+    75%{
+      bottom: 10px;
+    }
+
+}
+
+.caja3{
+    height: 150px;
+    width: 150px;
+    border-radius: 1em;
+    background-color: orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid black;
+    transition: all 2s;
+}
+.caja3:hover{
+    transform: rotate3d(0,1,0,180deg);
+    perspective: 300px;
+}
